@@ -42,6 +42,33 @@ app.post('/', function (req, res) {
     }
   }
 
+  // find target
+  for (const property in state) {
+
+    if (myD === 'E') {
+      if (myX + 2 == `${state[property].x}`) {
+        res.send('T');
+      }
+    }
+    if (myD === 'S') {
+      if (myX + 2 == `${state[property].x}`) {
+        res.send('T');
+      }
+    }
+
+    if (myD === 'E') {
+      if (myX - 2 == `${state[property].x}`) {
+        res.send('T');
+      }
+    }
+
+    if (myD === 'N') {
+      if (myX - 2 == `${state[property].x}`) {
+        res.send('T');
+      }
+    }
+  }
+  
   if (myX == 0) {
     if (myD === 'W') {
       res.send('R');
