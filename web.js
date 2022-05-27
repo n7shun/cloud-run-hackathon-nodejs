@@ -18,8 +18,7 @@ app.post('/', function (req, res) {
   console.log("-----")  
   console.log("rarena_width: " + arena_width);
   console.log("arena_high: " + arena_high);
-  console.log("state: " + req.body.arena.state.length);
-  console.log("state: " + req.body.arena.state[0]);
+  console.log("state: " + req.body.arena.state);
   //console.log("state[0]: " + state[0].x);
   //console.log("state[0].y: " + state[0].y);
   console.log("-----")
