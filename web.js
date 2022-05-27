@@ -51,7 +51,7 @@ app.post('/', function (req, res) {
       }
     }
     if (myD === 'S') {
-      if (myX + 1 == `${state[property].y}`) {
+      if (myX + 1 == `${state[property].x}`) {
         res.send('T');
       }
     }
@@ -63,7 +63,7 @@ app.post('/', function (req, res) {
     }
 
     if (myD === 'N') {
-      if (myX - 1 == `${state[property].y}`) {
+      if (myX - 1 == `${state[property].x}`) {
         res.send('T');
       }
     }
