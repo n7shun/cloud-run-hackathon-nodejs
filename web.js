@@ -11,10 +11,10 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
   console.log(req.body);
   
-  consoleog.log("-----")
+  console.log("-----")
   console.log(req.body.arena.dims);
-  consoleog.log("-----")
-  
+  console.log("-----")
+
   const moves = ['F', 'T', 'L', 'R'];
   res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
