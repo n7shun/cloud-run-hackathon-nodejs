@@ -20,9 +20,15 @@ app.post('/', function (req, res) {
   console.log("arena_high: " + arena_high);
   for (const property in state) {
     console.log(`${property}: ${state[property]}`);
-    console.log(`${state[property].x}`);
-    console.log(`${state[property].y}`);
+
+
+    console.log(`${property}: ${state[property].x}`);
+    console.log(`${property}: ${state[property].y}`);
     
+    if (`${property}` === "https://cloud-run-hackathon-nodejs-cjt3sz6wfq-uc.a.run.app") {
+      console.log(`${property}: ${state[property].x}`);
+      console.log(`${property}: ${state[property].y}`);
+    }
   }
   //console.log("state[0]: " + state[0].x);
   //console.log("state[0].y: " + state[0].y);
