@@ -54,13 +54,13 @@ app.post('/', function (req, res) {
     }
   }
 
-  if (myX + 1 > arena_width) {
+  if (myX == arena_width) {
     if (myD === 'E') {
       res.send('R');
     }
   }
 
-  if (myY + 1 >  arena_high) {
+  if (myY ==  arena_high) {
     if (myD === 'S') {
       res.send('R');
     }
