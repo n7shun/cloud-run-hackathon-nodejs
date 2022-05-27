@@ -18,7 +18,9 @@ app.post('/', function (req, res) {
   console.log("-----")  
   console.log("rarena_width: " + arena_width);
   console.log("arena_high: " + arena_high);
-  console.log("state: " + req.body.arena.state);
+  for (const property in state) {
+    console.log(`${property}: ${object[property]}`);
+  }
   //console.log("state[0]: " + state[0].x);
   //console.log("state[0].y: " + state[0].y);
   console.log("-----")
