@@ -19,16 +19,14 @@ app.post('/', function (req, res) {
   console.log("rarena_width: " + arena_width);
   console.log("arena_high: " + arena_high);
   for (const property in state) {
-    console.log(`${property}: ${state[property]}`);
-
-
-    console.log(`${property}: ${state[property].x}`);
-    console.log(`${property}: ${state[property].y}`);
+    //console.log(`${property}: ${state[property]}`);
+    console.log(`${property}: ${state[property].x}, ${state[property].y} - ${state[property].direction}`);    
     
     if (`${property}` === "https://cloud-run-hackathon-nodejs-cjt3sz6wfq-uc.a.run.app") {
       console.log('***')
-      console.log(`${property}: ${state[property].x}`);
-      console.log(`${property}: ${state[property].y}`);
+      console.log(`X: ${state[property].x}`);
+      console.log(`Y: ${state[property].y}`);
+      console.log(`Y: ${state[property].direction}`);
     }
   }
   //console.log("state[0]: " + state[0].x);
