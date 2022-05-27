@@ -17,10 +17,10 @@ app.post('/', function (req, res) {
 
   console.log("-----")  
   console.log("rarena_width: " + arena_width);
-  console.log("rarena_width: " + arena_high);
-  console.log("state: " + state.length);
-  console.log("state[0].x: " + state[0].x);
-  console.log("state[0].y: " + state[0].y);
+  console.log("arena_high: " + arena_high);
+  console.log("state: " + req.body.arena.state);
+  //console.log("state[0]: " + state[0].x);
+  //console.log("state[0].y: " + state[0].y);
   console.log("-----")
 
   const moves = ['F', 'T', 'L', 'R'];
