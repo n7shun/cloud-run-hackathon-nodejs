@@ -13,6 +13,8 @@ app.post('/', function (req, res) {
   
   console.log("-----")
   console.log(req.body.arena.dims);
+  console.log(req.body.arena.dims[0]);
+  console.log(req.body.arena.dims[1]);
   console.log("-----")
 
   const moves = ['F', 'T', 'L', 'R'];
