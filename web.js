@@ -46,24 +46,24 @@ app.post('/', function (req, res) {
   for (const property in state) {
 
     if (myD === 'E') {
-      if ((myX + 1 == `${state[property].x}`) || (myX + 2 == `${state[property].x}`)) {
+      if (myX + 1 == `${state[property].x}`) {
         res.send('T');
       }
     }
     if (myD === 'S') {
-      if ((myX + 1 == `${state[property].y}`) || (myX + 2 == `${state[property].y}`)) {
+      if (myX + 1 == `${state[property].y}`) {
         res.send('T');
       }
     }
 
     if (myD === 'W') {
-      if ((myX - 1 == `${state[property].x}`) || (myX - 2 == `${state[property].x}`)) {
+      if (myX - 1 == `${state[property].x}`) {
         res.send('T');
       }
     }
 
     if (myD === 'N') {
-      if ((myX - 1 == `${state[property].y}`) || (myX - 2 == `${state[property].y}`)) {
+      if (myX - 1 == `${state[property].y}`) {
         res.send('T');
       }
     }
