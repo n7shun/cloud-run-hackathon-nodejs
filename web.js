@@ -26,6 +26,7 @@ app.post('/', function (req, res) {
     console.log(`${property}: ${state[property].y}`);
     
     if (`${property}` === "https://cloud-run-hackathon-nodejs-cjt3sz6wfq-uc.a.run.app") {
+      console.log('***')
       console.log(`${property}: ${state[property].x}`);
       console.log(`${property}: ${state[property].y}`);
     }
