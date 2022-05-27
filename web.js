@@ -42,8 +42,14 @@ app.post('/', function (req, res) {
     }
   }
 
-  if (myX === 0) {
+  if (myX == 0) {
     if (myD === 'W') {
+      res.send('L');
+    }
+  }
+
+  if (myY == 0) {
+    if (myD === 'N') {
       res.send('L');
     }
   }
