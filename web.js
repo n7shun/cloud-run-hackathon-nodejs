@@ -11,10 +11,16 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
   console.log(req.body);
   
-  console.log("-----")
-  console.log(req.body.arena.dims);
-  console.log(req.body.arena.dims[0]);
-  console.log(req.body.arena.dims[1]);
+  var arena_width = req.body.arena.dims[0];
+  var arena_high = req.body.arena.dims[1];
+  var state = req.body.arena.state;
+
+  console.log("-----")  
+  console.log("rarena_width: " + arena_width);
+  console.log("rarena_width: " + arena_high);
+  console.log("state: " + state.length);
+  console.log("state[0].x: " + state[0].x);
+  console.log("state[0].y: " + state[0].y);
   console.log("-----")
 
   const moves = ['F', 'T', 'L', 'R'];
