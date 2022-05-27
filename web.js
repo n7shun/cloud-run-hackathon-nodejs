@@ -43,31 +43,31 @@ app.post('/', function (req, res) {
   }
 
   // find target
-  for (const property in state) {
+  // for (const property in state) {
 
-    if (myD === 'E') {
-      if (myX + 1 == `${state[property].x}`) {
-        res.send('T');
-      }
-    }
-    if (myD === 'S') {
-      if (myX + 1 == `${state[property].x}`) {
-        res.send('T');
-      }
-    }
+  //   if (myD === 'E') {
+  //     if (myX + 1 == `${state[property].x}`) {
+  //       res.send('T');
+  //     }
+  //   }
+  //   if (myD === 'S') {
+  //     if (myX + 1 == `${state[property].x}`) {
+  //       res.send('T');
+  //     }
+  //   }
 
-    if (myD === 'W') {
-      if (myX - 1 == `${state[property].x}`) {
-        res.send('T');
-      }
-    }
+  //   if (myD === 'W') {
+  //     if (myX - 1 == `${state[property].x}`) {
+  //       res.send('T');
+  //     }
+  //   }
 
-    if (myD === 'N') {
-      if (myX - 1 == `${state[property].x}`) {
-        res.send('T');
-      }
-    }
-  }
+  //   if (myD === 'N') {
+  //     if (myX - 1 == `${state[property].x}`) {
+  //       res.send('T');
+  //     }
+  //   }
+  // }
   
   if (myX == 0) {
     if (myD === 'W') {
