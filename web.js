@@ -13,6 +13,8 @@ app.post('/', function (req, res) {
   
   var arena_width = req.body.arena.dims[0];
   var arena_high = req.body.arena.dims[1];
+  var myX = 0;
+  var myY = 0;
   var state = req.body.arena.state;
 
   console.log("-----")  
@@ -24,9 +26,12 @@ app.post('/', function (req, res) {
     
     if (`${property}` === "https://cloud-run-hackathon-nodejs-cjt3sz6wfq-uc.a.run.app") {
       console.log('***')
-      console.log(`X: ${state[property].x}`);
-      console.log(`Y: ${state[property].y}`);
-      console.log(`Y: ${state[property].direction}`);
+      myX = `${state[property].x}`;
+      myY = `${state[property].y}`;
+      //console.log(`X: ${state[property].x}`);
+      //console.log(`Y: ${state[property].y}`);
+      console.log('[x, y]:' + myX, myY);
+      console.log(`direction: ${state[property].direction}`);
     }
   }
   //console.log("state[0]: " + state[0].x);
