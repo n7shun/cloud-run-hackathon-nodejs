@@ -15,11 +15,14 @@ app.post('/', function (req, res) {
   var arena_high = req.body.arena.dims[1];
   var myX = 0;
   var myY = 0;
+  var myD = '';
   var state = req.body.arena.state;
 
   console.log("-----")  
   console.log("rarena_width: " + arena_width);
   console.log("arena_high: " + arena_high);
+
+  // get my location
   for (const property in state) {
     //console.log(`${property}: ${state[property]}`);
     //console.log(`${property}: ${state[property].x}, ${state[property].y} - ${state[property].direction}`);    
@@ -28,23 +31,44 @@ app.post('/', function (req, res) {
       console.log('***')
       myX = `${state[property].x}`;
       myY = `${state[property].y}`;
+      myD = `${state[property].direction}`;
+
       //console.log(`X: ${state[property].x}`);
       //console.log(`Y: ${state[property].y}`);
       console.log('[x]: ' + myX);
       console.log('[y]: ' + myY);
 
-      console.log('[x2]: ' + `${state[property].x}`);
-      console.log('[y2]: ' + `${state[property].y}`);
-
       console.log(`direction: ${state[property].direction}`);
     }
   }
+
+  if (myX === 0) {
+    if (myD === 'W') {
+      res.send('L');
+    }
+  }
+
+  if (myX + 1 > arena_width) {
+    if (myD === 'E') {
+      res.send('R');
+    }
+  }
+
+  if (myY + 1 >  arena_high) {
+    if (myD === 'S') {
+      res.send('R');
+    }
+  }
+
+  res.send('F');
+
+
   //console.log("state[0]: " + state[0].x);
   //console.log("state[0].y: " + state[0].y);
   console.log("-----")
 
-  const moves = ['F', 'T', 'L', 'R'];
-  res.send(moves[Math.floor(Math.random() * moves.length)]);
+  //const moves = ['F', 'T', 'L', 'R'];
+  //res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
 
 app.listen(process.env.PORT || 8080);
