@@ -31,7 +31,11 @@ app.post('/', function (req, res) {
       //console.log(`X: ${state[property].x}`);
       //console.log(`Y: ${state[property].y}`);
       console.log('[x]: ' + myX);
-      console.log('[x]: ' + myY);
+      console.log('[y]: ' + myY);
+
+      console.log('[x2]: ' + `${state[property].x}`);
+      console.log('[y2]: ' + `${state[property].y}`);
+
       console.log(`direction: ${state[property].direction}`);
     }
   }
